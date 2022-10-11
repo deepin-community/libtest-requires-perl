@@ -1,0 +1,23 @@
+Source: libtest-requires-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Angel Abad <angel@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: perl
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtest-requires-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtest-requires-perl.git
+Homepage: https://metacpan.org/release/Test-Requires
+Rules-Requires-Root: no
+
+Package: libtest-requires-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: utility module for tests to check whether modules are available
+ Test::Requires is a Perl module for tests written using Test::Builder that
+ simply checks to see if the module can be loaded. If loading the module fails
+ then this skips all tests in the file, rather than causing a complete failure
+ in module testing.
